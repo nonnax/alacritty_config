@@ -8,7 +8,7 @@ fail 'no theme found' unless theme
 
 theme_val=File.read(theme)
 
-theme=File.basename(theme)
+theme_name=File.basename(theme)
 
 puts File.read('alacritty.erb').render(binding)
 
@@ -32,7 +32,7 @@ env:
   # LC_CTYPE: en_US.UTF-8
   
   import:
-    /home/seti/.config/alacritty/themes/<%=theme%>
+    /home/seti/.config/alacritty/themes/<%= theme_name %>
     # /home/seti/.config/alacritty/themes/afterglow.yaml
     # /home/seti/.config/alacritty/themes/material_theme_mod.yaml
     # /home/seti/.config/alacritty/themes/tokyo-night-storm.yaml
