@@ -1,18 +1,3 @@
-#!/usr/bin/env ruby
-require 'rubytools/string_ext'
-require 'rubytools/fzf'
-
-theme=Dir['themes/*'].fzf.first
-
-fail 'no theme found' unless theme
-
-theme_val=File.read(theme)
-
-theme=File.basename(theme)
-
-puts File.read('alacritty.erb').render(binding)
-
-__END__
 # Configuration for Alacritty, the GPU enhanced terminal emulator
 
 # Any items in the `env` entry below will be added as
