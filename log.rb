@@ -1,11 +1,22 @@
 #!/usr/bin/env ruby
-# Id$ nonnax 2022-03-13 21:46:00 +0800
-# 
-# logs selected theme to .theme
-# 
-theme=nil
-File.open('alacritty.yml').each do |l|
-  theme=l.scan(/[.\w]+/).last if l.match?(/Theme:/)
-end
+# frozen_string_literal: true
 
-File.write('.theme', %W[themes #{theme}].join('/')) if theme
+# Id$ nonnax 2022-03-13 21:46:00 +0800
+#
+# logs selected theme to .theme
+
+theme = nil
+File.open('alacritty.yml').each do |l|
+  #
+  # [Theme:themes/falcon.yaml]
+  #
+  next unless l.match?(/\[Theme:/)
+
+  theme =
+    l
+    .scan(%r{\w+/[.\w]+})
+    .first
+  
+  break if theme # short-circuit
+end
+File.write('.theme', theme) if theme

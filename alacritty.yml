@@ -144,7 +144,7 @@ font:
     #style: Bold Italic
 
   # Point size
-  size: 8.5
+  size: 7
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -195,34 +195,42 @@ colors:
     #bright_foreground: '#ffffff'
 
 # Theme code start --------------------------------------------------------
-# Colors (Ayu Dark)
+# [Theme:themes/falcon.yaml]
+# falcon colorscheme for alacritty
+# by fenetikm, https://github.com/fenetikm/falcon
 colors:
   # Default colors
   primary:
-    background: '0x0A0E14'
-    foreground: '0xB3B1AD'
+    background: '0x020221'
+    foreground: '0xb4b4b9'
+
+  # Colors the cursor will use if `custom_cursor_colors` is true
+  cursor:
+    text: '0x020221'
+    cursor: '0xffe8c0'
 
   # Normal colors
   normal:
-    black:   '0x01060E'
-    red:     '0xEA6C73'
-    green:   '0x91B362'
-    yellow:  '0xF9AF4F'
-    blue:    '0x53BDFA'
-    magenta: '0xFAE994'
-    cyan:    '0x90E1C6'
-    white:   '0xC7C7C7'
+    black:   '0x000004'
+    red:     '0xff3600'
+    green:   '0x718e3f'
+    yellow:  '0xffc552'
+    blue:    '0x635196'
+    magenta: '0xff761a'
+    cyan:    '0x34bfa4'
+    white:   '0xb4b4b9'
 
   # Bright colors
   bright:
-    black:   '0x686868'
-    red:     '0xF07178'
-    green:   '0xC2D94C'
-    yellow:  '0xFFB454'
-    blue:    '0x59C2FF'
-    magenta: '0xFFEE99'
-    cyan:    '0x95E6CB'
-    white:   '0xFFFFFF'
+    black:   '0x020221'
+    red:     '0xff8e78'
+    green:   '0xb1bf75'
+    yellow:  '0xffd392'
+    blue:    '0x99a4bc'
+    magenta: '0xffb07b'
+    cyan:    '0x8bccbf'
+    white:   '0xf8f8ff'
+
 # Theme code end   --------------------------------------------------------
   # Cursor colors
   #

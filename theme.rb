@@ -7,7 +7,7 @@ begin
 
   raise 'No theme selected' unless theme
 
-  theme_val=File.read(theme)
+  theme_text=File.read(theme)
 
   res = File.read('alacritty.erb').render(binding)
 
