@@ -14,20 +14,20 @@
   # LANG: "en_US.UTF-8"
   # LC_CTYPE: en_US.UTF-8
 
-#window:
+window:
   # Window background opacity
   #
   # Specified in floating number from `0.0` to `1.0`.
   # The value `0.0` is completely transparent and `1.0` is opaque.
-  #opacity: 1.0
+  opacity: 0.85
 
   # Window dimensions (changes require restart)
   #
   # Specified in number of columns/lines, not pixels.
   # If both are `0`, this setting is ignored.
-  #dimensions:
-  #  columns: 0
-  #  lines: 0
+  # dimensions:
+  # columns: 180
+  # lines: 80
 
   # Window position (changes require restart)
   #
@@ -113,8 +113,11 @@ font:
     style: Regular
     # style: Retina
 
+    # The `style` can be specified to pick a specific face.
+    # style: Regular
+
   # Bold font face
-  #bold:
+  bold:
     # Font family
     #
     # If the bold family is not specified, it will fall back to the
@@ -178,7 +181,7 @@ font:
   #
   # This is a global setting and will require a log out or restart to take
   # effect.
-  use_thin_strokes: true
+  # use_thin_strokes: true
 
 # If `true`, bold text is drawn using the bright color variants.
 #draw_bold_text_with_bright_colors: false
@@ -315,7 +318,7 @@ colors:
   #unfocused_hollow: true
 
 # Live config reload (changes require restart)
-#live_config_reload: true
+live_config_reload: true
 
 # Shell
 #

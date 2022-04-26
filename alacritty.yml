@@ -14,20 +14,20 @@
   # LANG: "en_US.UTF-8"
   # LC_CTYPE: en_US.UTF-8
 
-#window:
+window:
   # Window background opacity
   #
   # Specified in floating number from `0.0` to `1.0`.
   # The value `0.0` is completely transparent and `1.0` is opaque.
-  #opacity: 1.0
+  opacity: 0.85
 
   # Window dimensions (changes require restart)
   #
   # Specified in number of columns/lines, not pixels.
   # If both are `0`, this setting is ignored.
-  #dimensions:
-  #  columns: 0
-  #  lines: 0
+  # dimensions:
+  # columns: 180
+  # lines: 80
 
   # Window position (changes require restart)
   #
@@ -105,19 +105,20 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: "Monoid Nerd Font"
+    family: "Mononoki Nerd Font"
 
     # The `style` can be specified to pick a specific face.
-    style: Regular
+    # style: Regular
+    style: Bold
 
   # Bold font face
-  #bold:
+  bold:
     # Font family
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
     #family: monospace
-    family: "Monoid Nerd Font"
+    family: "Mononoki Nerd Font"
     # The `style` can be specified to pick a specific face.
     style: Bold
 
@@ -144,7 +145,7 @@ font:
     #style: Bold Italic
 
   # Point size
-  size: 7
+  size: 9.5
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -173,7 +174,7 @@ font:
   #
   # This is a global setting and will require a log out or restart to take
   # effect.
-  use_thin_strokes: true
+  # use_thin_strokes: true
 
 # If `true`, bold text is drawn using the bright color variants.
 #draw_bold_text_with_bright_colors: false
@@ -195,6 +196,7 @@ colors:
     #bright_foreground: '#ffffff'
 
 # Theme code start --------------------------------------------------------
+<<<<<<< HEAD
 # [Theme:themes/blood_moon.yaml]
 # Colors (Blood Moon)
 colors:
@@ -224,6 +226,37 @@ colors:
     magenta: '0xFF1493'
     cyan:    '0x00CCCC'
     white:   '0xFFFAFA'
+=======
+# [Theme:themes/tomorrow_night_bright.yaml]
+# Colors (Tomorrow Night Bright)
+colors:
+  # Default colors
+  primary:
+    background: '0x000000'
+    foreground: '0xeaeaea'
+
+  # Normal colors
+  normal:
+    black:   '0x000000'
+    red:     '0xd54e53'
+    green:   '0xb9ca4a'
+    yellow:  '0xe6c547'
+    blue:    '0x7aa6da'
+    magenta: '0xc397d8'
+    cyan:    '0x70c0ba'
+    white:   '0x424242'
+
+  # Bright colors
+  bright:
+    black:   '0x666666'
+    red:     '0xff3334'
+    green:   '0x9ec400'
+    yellow:  '0xe7c547'
+    blue:    '0x7aa6da'
+    magenta: '0xb77ee0'
+    cyan:    '0x54ced6'
+    white:   '0x2a2a2a'
+>>>>>>> 466f1fbd9630e87ba268fa297e4b7e0ac9a94b05
 # Theme code end   --------------------------------------------------------
   # Cursor colors
   #
@@ -337,7 +370,7 @@ colors:
   #unfocused_hollow: true
 
 # Live config reload (changes require restart)
-#live_config_reload: true
+live_config_reload: true
 
 # Shell
 #
