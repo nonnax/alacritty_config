@@ -195,42 +195,35 @@ colors:
     #bright_foreground: '#ffffff'
 
 # Theme code start --------------------------------------------------------
-# [Theme:themes/falcon.yaml]
-# falcon colorscheme for alacritty
-# by fenetikm, https://github.com/fenetikm/falcon
+# [Theme:themes/blood_moon.yaml]
+# Colors (Blood Moon)
 colors:
   # Default colors
   primary:
-    background: '0x020221'
-    foreground: '0xb4b4b9'
-
-  # Colors the cursor will use if `custom_cursor_colors` is true
-  cursor:
-    text: '0x020221'
-    cursor: '0xffe8c0'
+    background: '0x10100E'
+    foreground: '0xC6C6C4'
 
   # Normal colors
   normal:
-    black:   '0x000004'
-    red:     '0xff3600'
-    green:   '0x718e3f'
-    yellow:  '0xffc552'
-    blue:    '0x635196'
-    magenta: '0xff761a'
-    cyan:    '0x34bfa4'
-    white:   '0xb4b4b9'
+    black:   '0x10100E'
+    red:     '0xC40233'
+    green:   '0x009F6B'
+    yellow:  '0xFFD700'
+    blue:    '0x0087BD'
+    magenta: '0x9A4EAE'
+    cyan:    '0x20B2AA'
+    white:   '0xC6C6C4'
 
   # Bright colors
   bright:
-    black:   '0x020221'
-    red:     '0xff8e78'
-    green:   '0xb1bf75'
-    yellow:  '0xffd392'
-    blue:    '0x99a4bc'
-    magenta: '0xffb07b'
-    cyan:    '0x8bccbf'
-    white:   '0xf8f8ff'
-
+    black:   '0x696969'
+    red:     '0xFF2400'
+    green:   '0x03C03C'
+    yellow:  '0xFDFF00'
+    blue:    '0x007FFF'
+    magenta: '0xFF1493'
+    cyan:    '0x00CCCC'
+    white:   '0xFFFAFA'
 # Theme code end   --------------------------------------------------------
   # Cursor colors
   #

@@ -10,12 +10,8 @@ File.open('alacritty.yml').each do |l|
   #
   # [Theme:themes/falcon.yaml]
   #
-  next unless l.match?(/\[Theme:/)
-
-  theme =
-    l
-    .scan(%r{\w+/[.\w]+})
-    .first
+  next unless md=l.match(/\[Theme\:(themes\/[\w.]+)/)
+  theme, = md.captures
   
   break if theme # short-circuit
 end
