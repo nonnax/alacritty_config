@@ -1,4 +1,6 @@
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
+#import:
+#  - ~/.config/alacritty.yml
 
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
@@ -86,14 +88,15 @@ window:
   # Set this to `None` to use the default theme variant.
   #gtk_theme_variant: None
 
-#scrolling:
+
+scrolling:
   # Maximum number of lines in the scrollback buffer.
   # Specifying '0' will disable scrolling.
-  #history: 10000
+  history: 5000
 
   # Number of lines the viewport will move for every line scrolled when
   # scrollback is enabled (history > 0).
-  #multiplier: 3
+  multiplier: 3
 
 # Font configuration
 font:
@@ -110,8 +113,9 @@ font:
     family: <%=font_family%>
 
     # The `style` can be specified to pick a specific face.
-    style: Regular
+    # style: Regular
     # style: Retina
+    style: <%=font_style%>
 
     # The `style` can be specified to pick a specific face.
     # style: Regular
@@ -187,13 +191,13 @@ font:
 #draw_bold_text_with_bright_colors: false
 
 # Colors (Tomorrow Night Bright)
-colors:
-
-  # Default colors
-  primary:
-    background: '#282c34'
-    foreground: '#eaeaea'
-
+# colors:
+#
+  # # Default colors
+  # primary:
+    # background: '#282c34'
+    # foreground: '#eaeaea'
+#
     # Bright and dim foreground colors
     #
     # The dimmed foreground color is calculated automatically if it is not present.
@@ -290,10 +294,15 @@ colors:
 #   - Linear
 #
 # Specifying a `duration` of `0` will disable the visual bell.
-#visual_bell:
-#  animation: EaseOutExpo
-#  duration: 0
-#  color: '#ffffff'
+visual_bell:
+animation: EaseOutExpo
+duration: 0.5
+color: '#ffffff'
+
+bell:
+  command:
+    program: beep
+    args: ["-l", "40"]
 
 #selection:
   #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"

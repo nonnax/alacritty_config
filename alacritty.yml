@@ -1,4 +1,6 @@
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
+#import:
+#  - ~/.config/alacritty.yml
 
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
@@ -86,14 +88,15 @@ window:
   # Set this to `None` to use the default theme variant.
   #gtk_theme_variant: None
 
-#scrolling:
+
+scrolling:
   # Maximum number of lines in the scrollback buffer.
   # Specifying '0' will disable scrolling.
-  #history: 10000
+  history: 5000
 
   # Number of lines the viewport will move for every line scrolled when
   # scrollback is enabled (history > 0).
-  #multiplier: 3
+  multiplier: 3
 
 # Font configuration
 font:
@@ -105,11 +108,17 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: "Mononoki Nerd Font"
+    # family: "Monoid Nerd Font"
+    # family: "Mononoki"
+    family: Mononoki Nerd Font
 
     # The `style` can be specified to pick a specific face.
     # style: Regular
-    style: Bold
+    # style: Retina
+    style: Medium
+
+    # The `style` can be specified to pick a specific face.
+    # style: Regular
 
   # Bold font face
   bold:
@@ -118,7 +127,9 @@ font:
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
     #family: monospace
-    family: "Mononoki Nerd Font"
+    # family: "Monoid Nerd Font"
+    # family: "Mononoki"
+    family: Mononoki Nerd Font
     # The `style` can be specified to pick a specific face.
     style: Bold
 
@@ -145,7 +156,7 @@ font:
     #style: Bold Italic
 
   # Point size
-  size: 9.5
+  size: 10.5
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -180,13 +191,13 @@ font:
 #draw_bold_text_with_bright_colors: false
 
 # Colors (Tomorrow Night Bright)
-colors:
-
-  # Default colors
-  primary:
-    background: '#282c34'
-    foreground: '#eaeaea'
-
+# colors:
+#
+  # # Default colors
+  # primary:
+    # background: '#282c34'
+    # foreground: '#eaeaea'
+#
     # Bright and dim foreground colors
     #
     # The dimmed foreground color is calculated automatically if it is not present.
@@ -196,67 +207,42 @@ colors:
     #bright_foreground: '#ffffff'
 
 # Theme code start --------------------------------------------------------
-<<<<<<< HEAD
-# [Theme:themes/blood_moon.yaml]
-# Colors (Blood Moon)
+# [Theme:themes/Cobalt2.yaml]
+# From the famous Cobalt2 sublime theme
+# Source : https://github.com/wesbos/cobalt2/tree/master/Cobalt2
 colors:
   # Default colors
   primary:
-    background: '0x10100E'
-    foreground: '0xC6C6C4'
+    background: '0x122637'
+    foreground: '0xffffff'
 
-  # Normal colors
-  normal:
-    black:   '0x10100E'
-    red:     '0xC40233'
-    green:   '0x009F6B'
-    yellow:  '0xFFD700'
-    blue:    '0x0087BD'
-    magenta: '0x9A4EAE'
-    cyan:    '0x20B2AA'
-    white:   '0xC6C6C4'
-
-  # Bright colors
-  bright:
-    black:   '0x696969'
-    red:     '0xFF2400'
-    green:   '0x03C03C'
-    yellow:  '0xFDFF00'
-    blue:    '0x007FFF'
-    magenta: '0xFF1493'
-    cyan:    '0x00CCCC'
-    white:   '0xFFFAFA'
-=======
-# [Theme:themes/tomorrow_night_bright.yaml]
-# Colors (Tomorrow Night Bright)
-colors:
-  # Default colors
-  primary:
-    background: '0x000000'
-    foreground: '0xeaeaea'
+  # Colors the cursor will use if `custom_cursor_colors` is true
+  cursor:
+    text: '0x122637'
+    cursor: '0xf0cb09'
 
   # Normal colors
   normal:
     black:   '0x000000'
-    red:     '0xd54e53'
-    green:   '0xb9ca4a'
-    yellow:  '0xe6c547'
-    blue:    '0x7aa6da'
-    magenta: '0xc397d8'
-    cyan:    '0x70c0ba'
-    white:   '0x424242'
+    red:     '0xff0000'
+    green:   '0x37dd21'
+    yellow:  '0xfee409'
+    blue:    '0x1460d2'
+    magenta: '0xff005d'
+    cyan:    '0x00bbbb'
+    white:   '0xbbbbbb'
 
   # Bright colors
   bright:
-    black:   '0x666666'
-    red:     '0xff3334'
-    green:   '0x9ec400'
-    yellow:  '0xe7c547'
-    blue:    '0x7aa6da'
-    magenta: '0xb77ee0'
-    cyan:    '0x54ced6'
-    white:   '0x2a2a2a'
->>>>>>> 466f1fbd9630e87ba268fa297e4b7e0ac9a94b05
+    black:   '0x545454'
+    red:     '0xf40d17'
+    green:   '0x3bcf1d'
+    yellow:  '0xecc809'
+    blue:    '0x5555ff'
+    magenta: '0xff55ff'
+    cyan:    '0x6ae3f9'
+    white:   '0xffffff'
+
 # Theme code end   --------------------------------------------------------
   # Cursor colors
   #
@@ -342,10 +328,15 @@ colors:
 #   - Linear
 #
 # Specifying a `duration` of `0` will disable the visual bell.
-#visual_bell:
-#  animation: EaseOutExpo
-#  duration: 0
-#  color: '#ffffff'
+visual_bell:
+animation: EaseOutExpo
+duration: 0.5
+color: '#ffffff'
+
+bell:
+  command:
+    program: beep
+    args: ["-l", "40"]
 
 #selection:
   #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
